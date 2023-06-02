@@ -11,38 +11,31 @@
   <h1>Patita Feliz</h1>
 
   <script>
+    alert('Patita Feliz');
+
+    let response = 1;
     let name;
     let age;
     let color;
     let species;
-    let animals;
-    
-    alert('Patita Feliz');
-    alert('Animal 1');
-    name = prompt('Nombre');
-    age = prompt('Edad');
-    color = prompt('Color');
-    species = prompt('Especie');
+    let animals = '';
 
-    animals = `
-      Nombre: ${name},
-      Edad: ${age},
-      Color: ${color},
-      Especie: ${species},
-    `;
-    
-    alert('Animal 2');
-    name = prompt('Nombre');
-    age = prompt('Edad');
-    color = prompt('Color');
-    species = prompt('Especie');
+    while (response == 1) {
+      alert('Registre su ser amado');
+      name = prompt('Nombre');
+      age = prompt('Edad');
+      color = prompt('Color');
+      species = prompt('Especie');
 
-    animals = animals +`
-      Nombre: ${name},
-      Edad: ${age},
-      Color: ${color},
-      Especie: ${species},
-    `;
+      animals += `
+        Nombre: ${name},
+        Edad: ${age},
+        Color: ${color},
+        Especie: ${species}
+        ---
+      `;
+      response = prompt('¿Desea ingresar más patitas? Sí (1) No (otra tecla)');
+    }
 
     alert(animals);
   </script>
